@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :elixir_api, ElixirApi.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "Cla0017!",
   database: "elixir_api_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

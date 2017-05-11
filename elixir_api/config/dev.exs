@@ -37,7 +37,7 @@ config :phoenix, :stacktrace_depth, 20
 config :elixir_api, ElixirApi.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "Cla0017!",
   database: "elixir_api_dev",
   hostname: "localhost",
   pool_size: 10
