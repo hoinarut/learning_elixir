@@ -37,6 +37,6 @@ defmodule TodoApi.Endpoint do
     store: :cookie,
     key: "_todo_api_key",
     signing_salt: "szQvGruS"
-
+  plug CORSPlug
   plug TodoApi.Router
 end

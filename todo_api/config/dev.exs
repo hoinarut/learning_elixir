@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :todo_api, TodoApi.Repo,
   adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "",
+  username: "phoenix",
+  password: "Phoenix2017!",
   database: "todo_api_dev",
   hostname: "localhost",
   pool_size: 10

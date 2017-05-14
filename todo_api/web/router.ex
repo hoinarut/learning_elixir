@@ -19,6 +19,13 @@ defmodule TodoApi.Router do
     get "/", PageController, :index
   end
 
+  scope "/api", TodoApi do
+    pipe_through :api
+
+    resources "/todos", TodoController, except: [:new, :edit]
+    resources "/users", UserController, only: [:create]
+    resources "/sessions", SessionController, only: [:create]
+  end
   # Other scopes may use custom stacks.
   # scope "/api", TodoApi do
   #   pipe_through :api
