@@ -1,6 +1,8 @@
 defmodule TodoApi.Todo do
   use TodoApi.Web, :model
 
+  @required_fields ~w(description complete owner_id)
+
   schema "todos" do
     field :description, :string
     field :complete, :boolean
@@ -12,7 +14,7 @@ defmodule TodoApi.Todo do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:description,:complete])
-    |> validate_required([:description,:complete])
+    |> cast(params, @required_fields)
+    |> validate_required(@required_fields)
   end
 end
